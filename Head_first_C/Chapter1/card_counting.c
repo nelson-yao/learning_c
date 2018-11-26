@@ -3,7 +3,9 @@
 
 int main()
 {
-    char card_name[3];
+    /* initiate array. 3 because need a space for the sentinal character*/
+    char card_name[3]; 
+
     puts("Enter the card name: ");
     scanf("%2s", card_name);
     int val = 0;
@@ -17,7 +19,11 @@ int main()
         val = 11;
     }else{
         val = atoi(card_name);
+    };
+    if (val >= 3 && val <= 6){
+        puts("Count has gone up");
+    }else if(val == 10){
+        puts("Count has gone down");
     }
-    printf("The card value is: %i\n", val);
     return 0;
 }
